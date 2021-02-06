@@ -1,0 +1,40 @@
+button{
+    margin-top: 10px;
+    
+}
+.text , .vl{
+    display: inline;
+}
+.vl {
+    border-left: 2px solid rgb(12, 12, 11);
+    height: 22px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.col{
+    border: 2px solid ;
+}
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: block;
+    height: 400px;
+    }
+.row{
+    height: 400px;
+}
+.guardar{
+    float: right;
+}
+.text,.texto{
+    margin: 10px;
+    font-size: large;
+
+}
+.secundario{
+    margin-top: 27px;
+}
