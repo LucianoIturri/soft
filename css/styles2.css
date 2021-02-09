@@ -1,0 +1,59 @@
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.header .body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width: 600px){
+    .header .body{
+        display: block;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+
+
+}
+
+/*estilos del formulario de login
+
+
+*/
+#container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    padding: 10rem;
+    border: 1px solid;
+    width: 600px;
+    justify-content: center;
+    text-align: center;
+   
+}
+.login ,.login_tag{
+    padding: 15px;
+    margin: 15px;
+
+}   
+.header_color{
+    display:flex;
+    padding: 15px;
+    justify-content: space-between;
+    
+   
+}
+.body_color{
+    display: flex;
+    margin: 0 5px 5px 5px;
+    border: 1px solid;
+    
+}

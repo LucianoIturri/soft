@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--Boton que abre el modal-->
+
+        <div class="header">
+            <div class="titulo">
+                <h1> Orden de produccion: xxx</h1>
+            </div>
+            <div class="body">
+                <h2 class="text">Modelo: xxxx</h2>
+                <div class="vl"></div>
+                <h2 class="text">Color: xxxxx</h2>
+                <div class="vl"></div>
+                <h2 class="text">Turno: xxxxx</h2>
+                <div class="vl"></div>
+                <h2 class="text">Bloque de: xxxxx</h2>
+                <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Crear defecto
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="container principal">
+            <div class="row">
+                <div class="col">
+                    Lista de defectos
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+
+                        <table class="table table-bordered table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Observacion</th>
+                                    <th scope="col">Seleccionar</th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td id="columna-nombre">Mal pintada</td>
+                                    <td>tiene manchas de pintura</td>
+                                    <td> <button id="seleccionar" onclick="recogerNombre()"><i class="far fa-thumbs-up"></i></button></td>
+
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td id="columna-nombre">Trenza rota</td>
+                                    <td>la trenza esta deshilachada</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td id="columna-nombre">Plantilla manchada</td>
+                                    <td>mancha de humedad</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Falta plantilla</td>
+                                    <td>no tiene plantilla</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Mal cosida</td>
+                                    <td>defectos en el cosido</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Trenza manchada</td>
+                                    <td>ttrenza con manchas de tierra</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>superficie quemada</td>
+                                    <td>quemadura de fuego</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+                                    <td> <button><i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Larry</td>
+                                    <td>the Bird</td>
+
+                                    <td> <button id="seleccionar" > <i class="far fa-thumbs-up"></i></button></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <h3 class="texto">Defecto seleccionado</h3>
+                     <h3 id="nombre-defecto">trenza rota</h3> 
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Pie izquierdo
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                            checked>
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Pie derecho
+                        </label>
+                    </div>
+                    <hr>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault3">
+                        <label class="form-check-label" for="flexRadioDefault3">
+                           De observacion
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault4">
+                        <label class="form-check-label" for="flexRadioDefault4">
+                           De reproceso
+                        </label>
+                    </div>
+                    <button class="btn btn-info guardar">Guardar</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container secundario">
+            <div class="row">
+                <div class="col">
+                    <table class="table table-striped table-responsive">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Defecto</th>
+                                <th scope="col">Pie</th>
+                                <th scope="col">Proceso</th>
+                                <th scope="col">Hora de hallazgo</th>
+                                <th scope="col">Accion</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mal pintada</td>
+                                <td>pie derecho</td>
+                                <td>reproceso</td>
+                                <td>17:45</td>
+                                <td><button><i class="far fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Falta plantilla</td>
+                                <td>pie izquierdo</td>
+                                <td>observacion</td>
+                                <td>17:45</td>
+                                <td><button><i class="far fa-trash-alt"></i></button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>plantilla manchada</td>
+                                <td>pie izquierdo</td>
+                                <td>reproceso</td>
+                                <td>17:45</td>
+                                <td><button><i class="far fa-trash-alt"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo defecto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form action="POST">
+                        <div class="modal-body">
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="nombre del defecto">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Observacion</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary">Guardar cambios</button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/c7b62facad.js" crossorigin="anonymous"></script>
+
+    </div>
+    <script >
+    
+    function recogerNombre(){
+    
+    var defecto =document.getElementById('columna-nombre').innerHTML
+    document.getElementById('nombre-defecto').innerText=defecto;
+    console.log('--------',defecto);
+}
+    </script>
+</body>
+
+</html>

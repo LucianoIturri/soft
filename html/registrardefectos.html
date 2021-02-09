@@ -9,15 +9,16 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container ">
+    <div class="container">
         <!--Boton que abre el modal-->
-        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Crear defecto
-        </button>
+      
     </div>
     <hr>
     <div class="container">
-        <h1  > Orden de produccion: xxx</h1>
+        <h1 > Orden de produccion: xxx</h1>
+        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Crear defecto
+      </button>
         <h2 class="text">Modelo: xxxx</h2>
         <div class="vl"></div>
         <h2 class="text">Color: xxxxx</h2>
@@ -25,6 +26,7 @@
         <h2 class="text">Turno: xxxxx</h2>
         <div class="vl"></div>
         <h2 class="text">Bloque de: xxxxx</h2>
+       
     </div>
 
     <div class="container principal">
@@ -212,7 +214,9 @@ Lista de defectos
           <h5 class="modal-title" id="exampleModalLabel">Nuevo defecto</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
+        <form action="POST">
+          <div class="modal-body">
+          
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nombre</label>
                 <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="nombre del defecto">
@@ -221,11 +225,14 @@ Lista de defectos
                 <label for="exampleFormControlTextarea1" class="form-label">Observacion</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-        </div>
+        </div> 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-primary">Guardar cambios</button>
         </div>
+        </form>
+     
+    
       </div>
     </div>
   </div>
