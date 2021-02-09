@@ -1,35 +1,101 @@
-.header{
+.defect-wraper {
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
-.header .body{
+
+.defect-wraper .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 1px #000 solid;
+}
+
+.defect-wraper .header .titulo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    border-bottom: 1px #000 solid;
+    padding-bottom: 5px;
 }
-@media screen and (max-width: 600px){
-    .header .body{
-        display: block;
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-
-
+.defect-wraper .header .titulo .btn {
+    max-height: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
+.defect-wraper .header .body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 5px;
+}
+
+.defect-wraper .defect-wraper-table {
+    padding-top: 10px;
+}
+
+#table {
+    width: 100%;
+}
+
+#table-head,
+#table-body {
+    display: block;
+}
+
+#table-body {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.defect-wraper .defect-wraper-type .defect-type-header {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    border-top: 2px #000 solid;
+}
+
+.defect-wraper .defect-wraper-type .defect-wraper-type-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.defect-wraper .defect-wraper-type .defect-wraper-type-check #feet {
+    display: flex;
+    flex-direction: column;
+}
+
+.defect-wraper .defect-wraper-type .defect-wraper-type-check #type {
+    display: flex;
+    flex-direction: column;
+}
+
+.defect-wraper .defect-wraper-type .btn {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
 
 /*estilos del formulario de login
 
 
 */
-#container{
+
+#container {
     display: flex;
     justify-content: center;
     height: 100vh;
-    
 }
 
-.login{
+.login {
     display: flex;
     flex-direction: column;
     padding: 10rem;
@@ -37,23 +103,22 @@
     width: 600px;
     justify-content: center;
     text-align: center;
-   
 }
-.login ,.login_tag{
+
+.login,
+.login_tag {
     padding: 15px;
     margin: 15px;
+}
 
-}   
-.header_color{
-    display:flex;
+.header_color {
+    display: flex;
     padding: 15px;
     justify-content: space-between;
-    
-   
 }
-.body_color{
+
+.body_color {
     display: flex;
     margin: 0 5px 5px 5px;
     border: 1px solid;
-    
 }
